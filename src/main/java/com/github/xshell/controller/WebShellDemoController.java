@@ -27,7 +27,7 @@ public class WebShellDemoController {
 	
 	@RequestMapping("index")
 	public String index(HttpServletRequest httpServletRequest){
-		
+		httpServletRequest.setAttribute("base",httpServletRequest.getContextPath());
 		return "webshell/webshellDemo";
 	}
 	
@@ -56,7 +56,7 @@ public class WebShellDemoController {
 		String url = WebShellUtils.buildWebShellPageUrl(httpServletRequest, webShellURL);
 		
 		System.out.println("重定向到"+url);
-		
+
 		httpServletResponse.sendRedirect(url);
 	}
 	

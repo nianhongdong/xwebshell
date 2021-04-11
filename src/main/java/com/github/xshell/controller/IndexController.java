@@ -14,7 +14,6 @@ public class IndexController {
 
     @RequestMapping("/index")
     public String index(Model model){
-        model.addAttribute("name","hello pillar");
-        return "index";
+        return "redirect:/webshellDemo/index";
     }
 }

@@ -35,6 +35,7 @@ import com.github.xshell.ssh.impl.RemoteShellChannel;
 import com.github.xshell.ssh.impl.RemoteShellChannelHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
@@ -44,6 +45,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
  * @author 1571
  */
 @ServerEndpoint(value = "/webshell/{webshellURL}", configurator = WebSocketModifyHandshakeConfigurator.class)
+@Component
 public class WebShellWebSocketEndpoint implements RemoteShellChannelHandler {
 
 	private static final Logger log = LoggerFactory.getLogger(WebShellWebSocketEndpoint.class);
@@ -117,7 +119,7 @@ public class WebShellWebSocketEndpoint implements RemoteShellChannelHandler {
 		String password = serverInfo.getPassword();
 		String ip = serverInfo.getIp();
 		int port = serverInfo.getPort();
-		
+
 		final RemoteShellChannel channel = factory.create(ip, port, username,password);
 		//DO NOT FORGATE THIS LINE CODE
 		channel.setRemoteShellChannelHandler(this);

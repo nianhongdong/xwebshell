@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="${base}/webshell/bootstrap-4.2.1.min.css?ver=${messageUtil("zftal.cssVersion")}">
+    <link rel="stylesheet" href="${base}/static/webshell/bootstrap-4.2.1.min.css">
 	
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="${base}/webshell/jquery-3.3.1.slim.min.js?ver=${messageUtil("zftal.cssVersion")}"></script>
-    <script src="${base}/webshell/popper-1.14.6.min.js?ver=${messageUtil("zftal.cssVersion")}"></script>
-    <script src="${base}/webshell/bootstrap-4.2.1.min.js?ver=${messageUtil("zftal.cssVersion")}"></script>
+    <script src="${base}/static/webshell/jquery-3.3.1.slim.min.js"></script>
+    <script src="${base}/static/webshell/popper-1.14.6.min.js"></script>
+    <script src="${base}/static/webshell/bootstrap-4.2.1.min.js"></script>
 
 
     <script type="text/javascript">
@@ -24,10 +24,10 @@
         });
     </script>
 
-    <link href="${base}/webshell/xterm.css?ver=${messageUtil("zftal.cssVersion")}" rel="stylesheet" />
-    <link href="${base}/webshell/main.css?ver=${messageUtil("zftal.cssVersion")}" rel="stylesheet" />
-    <script src="${base}/webshell/xterm.js?ver=${messageUtil("zftal.cssVersion")}" type="text/javascript"></script>
-    <script src="${base}/webshell/web-console.js?eleId=${eleId}" type="text/javascript"></script>
+    <link href="${base}/static/webshell/xterm.css" rel="stylesheet" />
+    <link href="${base}/static/webshell/main.css" rel="stylesheet" />
+    <script src="${base}/static/webshell/xterm.js" type="text/javascript"></script>
+    <script src="${base}/static/webshell/web-console.js?eleId=${eleId}" type="text/javascript"></script>
     <script type="text/javascript">
     	${startupJavaScript}
     </script>
@@ -36,7 +36,7 @@
 
 <body>
     <nav style="display:none;" class="navbar navbar-expand navbar-light bg-light flex-column flex-md-row bd-navbar">
-        <a href="https://github.com/alibaba/arthas" target="_blank" title="" class="navbar-brand"><img src="logo.png"
+        <a href="https://github.com/alibaba/arthas" target="_blank" title="" class="navbar-brand"><img src="static/png"
                 alt="Arthas" title="Welcome to Arthas web console" style="height: 25px;" class="img-responsive"></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -97,7 +97,7 @@
     </div>
 
     <div title="fullscreen" id="fullSc${eleId}" class="fullSc">
-        <button id="fullScBtn" onclick="xtermFullScreen()"><img src="fullsc.png"></button>
+        <button id="fullScBtn" onclick="xtermFullScreen()"><img src="${base}/static/webshell/fullsc.png"></button>
     </div>
 </body>
 

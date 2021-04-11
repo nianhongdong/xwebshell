@@ -3,10 +3,10 @@
 <head>
 	<title>${title}</title>
 	<!--jQuery核心框架库 -->
-    <script type="text/javascript" src="${base}/assets/js/jquery-1.11.3-min.js?ver=${messageUtil("zftal.jsVersion")}"></script>
-    <script type="text/javascript" src="${base}/assets/js/jquery-migrate-1.4.1.min.js?ver=${messageUtil("zftal.jsVersion")}"></script>
+    <script type="text/javascript" src="${base}/static/assets/js/jquery-1.11.3-min.js"></script>
+    <script type="text/javascript" src="${base}/static/assets/js/jquery-migrate-1.4.1.min.js"></script>
     <!--jQuery浏览器检测 -->
-    <script type="text/javascript" src="${base}/js/browse/browse-judge.js?ver=${messageUtil("zftal.jsVersion")}"></script>
+    <script type="text/javascript" src="${base}/static/js/browse/browse-judge.js"></script>
     <script type="text/javascript">
     	//\u6d4f\u89c8\u5668\u7248\u672c\u9a8c\u8bc1
     	/*var broswer = broswer();
@@ -19,8 +19,8 @@
     	}*/
     </script>
 	<!--Bootstrap布局框架-->
-    <link rel="stylesheet" type="text/css" href="${base}/assets/plugins/bootstrap/css/bootstrap.min.css?ver=${messageUtil("zftal.cssVersion")}" />
-    <script type="text/javascript" src="${base}/assets/plugins/bootstrap/js/bootstrap.min.js?ver=${messageUtil("zftal.jsVersion")}" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="${base}/static/assets/plugins/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="${base}/static/assets/plugins/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
 
 	<style>
 	.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{

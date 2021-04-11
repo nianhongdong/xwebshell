@@ -38,6 +38,10 @@ public class WebShellController {
 	 */
 	@RequestMapping("index")
 	public String index(HttpServletRequest httpServletRequest,@RequestParam(required=true)String webShellURL){
+
+		httpServletRequest.getSession(true);
+
+		httpServletRequest.setAttribute("base",httpServletRequest.getContextPath());
 		
 		WebShellURL webshellURLObject = WebShellURL.parse(webShellURL);
 		
@@ -65,7 +69,7 @@ public class WebShellController {
 		httpServletRequest.setAttribute("eleId",eleId);
 		httpServletRequest.setAttribute("startupJavaScript", startupJavaScript);
 		
-		return "/globalweb/comp/ops/webshell/webshellHome";
+		return "webshell/webshellHome";
 	}
 	
 	/**
@@ -75,6 +79,10 @@ public class WebShellController {
 	 */
 	@RequestMapping("mindex")
 	public String mindex(HttpServletRequest httpServletRequest,@RequestParam(required=true)String[] webShellURLs){
+
+		httpServletRequest.getSession(true);
+
+		httpServletRequest.setAttribute("base",httpServletRequest.getContextPath());
 		
 		List<String> list = Arrays.asList(webShellURLs);
 		
@@ -108,6 +116,6 @@ public class WebShellController {
 		httpServletRequest.setAttribute("webShellURLVOList",webShellURLVOList);
 		httpServletRequest.setAttribute("title","ssh连接-"+ StringUtils.join(serverIds, ","));
 		
-		return "/globalweb/comp/ops/webshell/mwebshellHome";
+		return "webshell/mwebshellHome";
 	}
 }

@@ -5,9 +5,9 @@
 	<title>webshell-demo</title>
 </head>
 <body>
-	<a href="${base}/webshellDemo/page.zf">打开单连接的webshell</a></br>
-	<a href="${base}/webshellDemo/mpage.zf">打开多连接的webshell</a></br>
-	<a href="${base}/webshellDemo/watchLogPage.zf">打开单连接的tail -f的webshell</a></br>
-	<a href="${base}/webshellDemo/watchLogMultiPage.zf">打开多连接的tail -f的webshell</a></br>
+	<a href="${base}/webshellDemo/page">打开单连接的webshell</a></br>
+	<a href="${base}/webshellDemo/mpage">打开多连接的webshell</a></br>
+	<a href="${base}/webshellDemo/watchLogPage">打开单连接的tail -f的webshell</a></br>
+	<a href="${base}/webshellDemo/watchLogMultiPage">打开多连接的tail -f的webshell</a></br>
 </body>
 </html>

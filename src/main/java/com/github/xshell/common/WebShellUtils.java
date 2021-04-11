@@ -22,9 +22,12 @@ public class WebShellUtils {
 	public static String buildWebShellPageUrl(ServletRequest request, WebShellURL webShellURL) {
 		int port = request.getLocalPort();
 		String localAddr = request.getLocalAddr();
+		if("0:0:0:0:0:0:0:1".equals(localAddr)){
+			localAddr = "127.0.0.1";
+		}
 		String scheme = request.getScheme();
 		String contextPath = request.getServletContext().getContextPath();
-		String url = String.format("%s://%s:%d%s/%s?webShellURL=%s", scheme,localAddr,port,contextPath,"webshell/index.zf",webShellURL.toURLString());
+		String url = String.format("%s://%s:%d%s/%s?webShellURL=%s", scheme,localAddr,port,contextPath,"webshell/index",webShellURL.toURLString());
 		log.debug("build webshell url {}",url);
 		return url;
 	}
@@ -48,7 +51,7 @@ public class WebShellUtils {
 		}
 		String strs = StringUtils.join(webshelURLStrs, ",");
 		
-		String url = String.format("%s://%s:%d%s/%s?webShellURLs=%s", scheme,localAddr,port,contextPath,"webshell/mindex.zf",strs);
+		String url = String.format("%s://%s:%d%s/%s?webShellURLs=%s", scheme,localAddr,port,contextPath,"webshell/mindex",strs);
 		log.debug("build multi webshell url {}",url);
 		return url;
 	}
